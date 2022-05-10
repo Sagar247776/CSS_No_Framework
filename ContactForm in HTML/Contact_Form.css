@@ -1,0 +1,44 @@
+*{
+    background-color: #2B2B2B;
+    color: white;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 15px 30px;
+    font-size: 17px;
+    padding: 80px;
+    
+}
+.Contact{
+    padding: 70px;
+}
+
+form{border:1px solid lightgray;
+padding: 25px;}
+.container{
+    background-color: #ff0000;
+    padding: 5px 20px 15px 20px;
+    border-radius: 4px;}
+
+input[type="text"],
+input[type="email"],
+textarea{
+    width: 100%;
+    padding: 12px;
+    border-color: azure;
+}
+button{
+    background-color: rgb(181, 35, 35);
+    padding: 15px 40px;
+    margin: 10px 0px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: large;
+
+}
+
+button:hover{
+    background-color: red;
+}

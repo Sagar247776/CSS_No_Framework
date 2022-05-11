@@ -1,0 +1,15 @@
+*{
+    
+}
+
+.name{
+    padding: 10px 5px;
+    background-color: blue;
+    border: 1px solid black;
+    width: 24%;
+}
+
+.div{
+    width: 100%;
+    display: flex;
+}

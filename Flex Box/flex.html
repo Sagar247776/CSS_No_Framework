@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        *{
+            color: white;
+            font-size: 55px;
+        }
+        .main{
+            display: flex;
+            justify-content: space-around;
+        }
+        .mini-main{
+            background-color: brown;
+            width: 30%;
+            height: 300px;
+            margin: 10px;
+            border-radius: 10px;
+            
+        }
+        .micro-main{
+            display: flex;
+            justify-content: space-between;
+        }
+        .micro{
+            color: brown;
+            background-color: whitesmoke;
+            margin: 2px;
+            width: 33%;
+            border-radius: 10px;
+        }
+        .r2main{
+            background-color: brown;
+            width: 24%;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        .r3main{
+            background-color: brown;
+            width: 20%;
+            margin: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="mini-main">1 <div class="micro-main"><div class="micro">1</div>
+        <div class="micro">2</div>
+        <div class="micro">3</div></div>
+        <div class="micro-main"><div class="micro">1</div>
+        <div class="micro">2</div>
+        <div class="micro">3</div>
+        <div class="micro">4</div></div>
+        <div class="micro-main"><div class="micro">1</div>
+        <div class="micro">2</div>
+        <div class="micro">3</div>
+        <div class="micro">4</div>
+        <div class="micro">5</div>
+        </div></div>
+
+
+        <div class="mini-main">2</div>
+        <div class="mini-main">3</div>
+    </div>
+
+
+
+    <div style="display: flex; justify-content: center; justify-content: space-between;"><div class="r2main">1</div>
+    <div class="r2main">2</div>
+    <div class="r2main">3</div>
+    <div class="r2main">4</div></div>
+    
+
+
+    <div style="display: flex; justify-content: center; justify-content: space-between;"><div class="r3main">1</div>
+    <div class="r3main">2</div>
+    <div class="r3main">3</div>
+    <div class="r3main">4</div>
+    <div class="r3main">5</div></div>
+</body>
+</html>

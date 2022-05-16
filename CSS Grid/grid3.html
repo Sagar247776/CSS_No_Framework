@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        *{
+            background-color: rgb(15, 13, 13);
+            color: white;
+            font-size: 56px;
+        }
+        .div{
+            display: grid;
+            grid-template-columns: 1fr 4fr 1fr;
+            grid-gap: 10px;
+        }
+        .Nav{
+            grid-row-start: 1;
+            grid-row-end: 9;
+            height: 930px;
+            
+        }
+        .Header{
+            display: grid;
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+        .Article{
+            grid-row-start: 2;
+            grid-row-end: 8;
+        }
+        
+        .Ads{
+            grid-row-start: 2;
+            grid-row-end: 8;
+        }
+        .Footer{
+            display: grid;
+            grid-row-start: 8;
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+
+        #myid{
+            display: grid;
+            background-color: rgba(0, 64, 255, 0.697);
+            grid-auto-rows: 10px;
+        }
+        #myid:hover{
+            background-color: brown;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="div">
+        <div class="Nav" id="myid">Nav</div>
+        <div class="Header"id="myid">Header</div>
+        <div class="Article"id="myid">Article</div>
+        <div class="Ads"id="myid">Ads</div>
+        <div class="Footer"id="myid">Footer</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        *{
+            background-color: rgb(33, 27, 27);
+            color: white;
+            font-size: 30px;
+            border-radius: 8px;
+            text-align: center;
+            background-size: cover;
+            
+        }
+        h1{
+            padding: 5px;
+            font-size: 50px;
+        }
+        .main{
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            grid-gap: 10px;
+        }
+        .item{
+            display: grid;
+            grid-gap: 10px;
+            grid-auto-rows: minmax(57px,auto);
+        }
+        .micro{
+            display: grid;            
+            background-color: rgba(0, 89, 255, 0.619);
+        }
+        .micro:hover{
+            cursor: pointer;
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Grid Layout
+    </h1>
+    <div class="main">
+        <div class="item">
+            <div class="micro">1</div>
+        </div>
+        <div class="item">
+            <div class="micro">2</div>
+            <div class="micro">3</div>
+        </div>
+        <div class="item">
+            <div class="micro">4</div>
+            <div class="micro">5</div>
+            <div class="micro">6</div>
+        </div>
+        <div class="item">
+            <div class="micro">7</div>
+            <div class="micro">8</div>
+            <div class="micro">9</div>
+            <div class="micro">10</div>
+        </div>
+        <div class="item">
+            <div class="micro">11</div>
+            <div class="micro">12</div>
+            <div class="micro">13</div>
+            <div class="micro">14</div>
+            <div class="micro">15</div>
+            <div class="micro">16</div>
+        </div>
+        <div class="item">
+            <div class="micro">17</div>
+            <div class="micro">18</div>
+            <div class="micro">19</div>
+            <div class="micro">20</div>
+            <div class="micro">21</div>
+            <div class="micro">22</div>
+            <div class="micro">23</div>
+            <div class="micro">24</div>
+            <div class="micro">25</div>
+            <div class="micro">26</div>
+            <div class="micro">27</div>
+            <div class="micro">28</div>
+        </div>
+    </div>
+</body>
+</html>

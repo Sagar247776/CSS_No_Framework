@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add_My_Array</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        const Myarray = [1, 2, 50, 90]
-        
-        function AddArray (arr=[]){
-            console.log(arr)
+      const Myarray = [1, 2, 50, 90, ];
+      function AddArray(arr = []) {
+        console.log(arr);
+        let total = 0;
+        for (let i = 0; i < arr.length; ++i) {
+            total = total + arr[i]  
         }
-
-        AddArray(Myarray)
+        return total
+      }
+      console.log(AddArray(Myarray))
     </script>
-</body>
+  </body>
 </html>

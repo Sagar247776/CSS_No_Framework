@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+        }
+        p{
+            margin: 0 20px;
+            font-size: 45px;
+            font-weight: 700;
+        }
+        a{
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <p><a id="hr"></a>HR</p>
+    <p><a id="min"></a>Min</p>
+    <p><a id="sec"></a>Sec</p>
+    <script>
+        console.log("Working");
+        
+        const timeDisplay = () =>{
+            const time = new Date();
+            document.getElementById("sec").innerHTML =time.getSeconds()
+            document.getElementById("min").innerHTML =time.getMinutes()
+            document.getElementById('hr').innerHTML =time.getHours()
+        }
+        setInterval(timeDisplay,100)
+    </script>
+</body>
+</html>

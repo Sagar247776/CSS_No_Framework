@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Notes</title>
+  </head>
+  <body>
+    <input id="item" type="text" />
+    <button onclick="addNotes()">Add</button>
+    <div class="tags"></div>
+    <script>
+      const itemInput = document.getElementById("item");
+      const tagsContainer = document.querySelector(".tags");
+
+      const addNotes = () => {
+        const tag = document.createElement("div");
+        if (itemInput.value == "") {
+          alert("please enter the input");
+        } else {
+          console.log(itemInput.value);
+          tag.innerText = itemInput.value;
+          tagsContainer.append(tag);
+        }
+      };
+    </script>
+  </body>
+</html>

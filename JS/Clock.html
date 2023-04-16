@@ -11,6 +11,7 @@
             justify-content: center;
             height: 100vh;
             align-items: center;
+            text-align: center;
         }
         p{
             margin: 0 20px;
@@ -20,22 +21,49 @@
         a{
             margin-right: 5px;
         }
+        .time{
+            display: flex;
+            margin: 5px 0;
+        }
+        #fullDT{
+            font-size: 20px;
+        }
     </style>
 </head>
 <body>
-    <p><a id="hr"></a>HR</p>
-    <p><a id="min"></a>Min</p>
-    <p><a id="sec"></a>Sec</p>
+<div>
+    <div class="time">
+        <p><a id="hr"></a><a id="apm">HR</a></p>
+        <p><a id="min"></a>Min</p>
+        <p><a id="sec"></a>Sec</p>
+        <p><a id="ms"></a>Ms</p>
+    </div>
+       <div>
+        <p id="fullDT">Full Date and Time</p>
+       </div>
+</div>
     <script>
         console.log("Working");
         
         const timeDisplay = () =>{
             const time = new Date();
+
+            let hrs = time.getHours()
+            let ampm = "AM";
+
+            if (hrs > 12){
+                hrs = hrs - 12;
+                ampm = "PM"
+            }
+
+            document.getElementById('hr').innerHTML = hrs
+            document.getElementById('fullDT').innerHTML = time
+            document.getElementById('apm').innerHTML = ampm
             document.getElementById("sec").innerHTML =time.getSeconds()
+            document.getElementById("ms").innerHTML =time.getMilliseconds()
             document.getElementById("min").innerHTML =time.getMinutes()
-            document.getElementById('hr').innerHTML =time.getHours()
         }
-        setInterval(timeDisplay,100)
+        setInterval(timeDisplay,1)
     </script>
 </body>
 </html>

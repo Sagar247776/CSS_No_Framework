@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Courier New", Courier, monospace;
+        box-sizing: border-box;
+      }
+
+      .head {
+        display: flex;
+        flex-flow: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .head h1 {
+        font-size: 45px;
+        margin: 30px 0;
+        font-weight: 700;
+      }
+
+      .head input {
+        padding: 10px;
+        font-size: 20px;
+        width: 50vw;
+      }
+
+      .head textarea {
+        width: 50vw;
+        padding: 10px;
+        font-size: 20px;
+        margin: 20px 0;
+      }
+
+      .head button {
+        padding: 14px 20px;
+        background-color: green;
+        color: white;
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      .task {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 50px 0px;
+      }
+
+      .task button {
+        margin: 0 50px;
+        padding: 5px 10px;
+        background-color: red;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="head">
+      <h1>To Do App</h1>
+      <div>
+        <form>
+          <input type="text" id="todo" required placeholder="title here" />
+          <br />
+          <textarea
+            id="todoArea"
+            rows="5"
+            required
+            placeholder="descriptions"
+          ></textarea>
+          <br />
+          <button id="add" type="submit">Add</button>
+        </form>
+      </div>
+    </div>
+    <!-- <div class="task">
+        <p id="title">Hello its me demo for your todo</p>
+        <p id="des">descriptions here</p>
+        <button id="delete">delete</button>
+    </div> -->
+    <script>
+      const input = document.getElementById("todo");
+      const textArea = document.getElementById("todoArea");
+      const form = document.querySelector("form");
+      const container = document.querySelector(".container");
+      const tasks = [];
+
+      const addTodo = () => {
+        console.log(tasks);
+
+        if (input.value == "") {
+          alert("enter the value first");
+        } else if (textArea == "") {
+          alert("enter the value first");
+        } else {
+          form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            tasks.push({
+              title: input.value,
+              description: textArea.value,
+            });
+          });
+          console.log(input.value);
+          // input.value = "";
+          console.log(textArea.value);
+          // textArea.value = "";
+        }
+      };
+      
+      document.getElementById("add").addEventListener("click", addTodo);
+    </script>
+  </body>
+</html>
